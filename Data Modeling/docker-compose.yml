@@ -1,0 +1,18 @@
+version: '3'
+services:
+  jupyter-notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/home/jovyan/work
+  postgres-db:
+    image: "postgres:alpine"
+    environment:
+      POSTGRES_DB: studentdb
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: student
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
