@@ -4,6 +4,19 @@ This is the first project of the Udacity Data Engineering Nano Degree. Its purpo
 - Define fact and dimension tables for a star schema.
 - Build an ETL pipeline using Python and SQL.
 
+**Table of contents**
+
+* [Context](#context)
+* [Data](#data)
+  - [Song Data](#song-data)
+  - [Log Data](#log-data)
+* [Database Schema](#database-schema)
+  - [Fact Table](#fact-table)
+  - [Dimension Tables](#dimension-tables)
+* [Project Structure](#project-structure)
+* [Docker, PostgreSQL, and Jupyter Notebook](#docker-postgresql-and-jupyter-notebook)
+* [Running the pipeline](#running-the-pipeline)
+
 ## Context
 From the project introduction:
 > A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
