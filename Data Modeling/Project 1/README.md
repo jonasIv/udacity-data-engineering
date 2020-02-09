@@ -267,7 +267,7 @@ $ docker-compose up
 ```
 
 ## Running the pipeline
-First, create the database tables by executing
+Open a new Terminal in the Jupyter Notebook. Then, change into the `work/` directory. Create the database tables by executing
 ```
 $ python create-tables.py
 ```
