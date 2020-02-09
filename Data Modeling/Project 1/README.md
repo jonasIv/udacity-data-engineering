@@ -196,7 +196,14 @@ The log data consists of log files in JSON format that simulate activity logs fr
 </table>
 
 ## Database Schema
-The schema is a star schema based around a fact table that represents the song plays.
+The schema is a star schema based around a fact table that represents the song plays. This allows Sparkify to analyze their songplay data accross different dimensions. For example:
+- Top 50 of songs last month (or other time frame)
+- Top artists in a given time frame
+- Top albmus in a given time frame
+- Most active users in a given time frame
+- Map of active users
+- Browser being used
+- Songplays per hour on a given day
 
 ### Fact Table
 #### songplays
