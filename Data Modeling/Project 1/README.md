@@ -269,7 +269,7 @@ $ docker-compose up
 ## Running the pipeline
 First, create the database tables by executing
 ```
-$ python creat-tables.py
+$ python create-tables.py
 ```
 
 To start the ETL script run
