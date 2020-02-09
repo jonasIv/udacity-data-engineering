@@ -202,7 +202,7 @@ The schema is a star schema based around a fact table that represents the song p
 - Top albmus in a given time frame
 - Most active users in a given time frame
 - Map of active users
-- Browser being used
+- Browsers/Devices being used
 - Songplays per hour on a given day
 
 ### Fact Table
