@@ -236,16 +236,16 @@ Timestamps of records in songplays broken down into specific units.
     
 ## Project Structure
 - `src/data` - Directory with song data and log data.
-- `src/create_tables.py` - Script for creating the database tables based on a star schema
-- `src/etl.ipynb` - Jupyter Notebook for researching ETL pipeline steps
-- `src/etl.py` - Script for running the ETL pipeline
-- `src/sql_queries.py` - Script that defines the database schema (used by `create_tables.py`)
-- `src/test.ipynb` - Jupyter Notebook for checking the database content
-- `Dockerfile` - File is used for creating the Jupyter Notebook container
-- `docker-compose.yml` - File for launching the database and Jupyter Notebook
+- `src/create_tables.py` - Script for creating the database tables based on a star schema.
+- `src/etl.ipynb` - Jupyter Notebook for researching ETL pipeline steps.
+- `src/etl.py` - Script for running the ETL pipeline.
+- `src/sql_queries.py` - Script that defines the database schema (used by `create_tables.py`).
+- `src/test.ipynb` - Jupyter Notebook for checking the database content.
+- `Dockerfile` - File is used for creating the Jupyter Notebook container.
+- `docker-compose.yml` - File for launching the database and Jupyter Notebook.
 - `postgres-data` - Local directory for the PostgreSQL Database file.
 
-## Docker, PostgreSQL and Jupyter Notebook
+## Docker, PostgreSQL, and Jupyter Notebook
 The project requires a PostgreSQL database and a Jupyter Notebook. The files include a `docker-compose` file that starts two containers, one for the database and one for the notebook. Files can be edited from the notebook or locally (they are synced to the notebook container).
 
 First, make sure you have Docker installed. Then, run Docker Compose:
@@ -254,7 +254,7 @@ $ docker-compose up
 ```
 
 ## Running the pipeline
-First create the database tables by executing
+First, create the database tables by executing
 ```
 $ python creat-tables.py
 ```
