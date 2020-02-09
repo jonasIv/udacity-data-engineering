@@ -204,6 +204,7 @@ The schema is a star schema based around a fact table that represents the song p
 - Map of active users
 - Browsers/Devices being used
 - Songplays per hour on a given day
+- Compare behaviour of paid vs non-paid users
 
 ### Fact Table
 #### songplays
