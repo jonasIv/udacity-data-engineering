@@ -1,8 +1,8 @@
 # Data Modeling - Project 1
-This is the first project of the Udacity Data Engineering Nano Degree. Its purpose is to
-- Apply concepts of data modeling with Postgres
-- Define fact and dimension tables for a star schema
-- Build an ETL pipeline using Python and SQL
+This is the first project of the Udacity Data Engineering Nano Degree. Its purpose is to...
+- Apply concepts of data modeling with Postgres.
+- Define fact and dimension tables for a star schema.
+- Build an ETL pipeline using Python and SQL.
 
 ## Context
 From the project introduction:
@@ -13,7 +13,7 @@ From the project introduction:
 ## Data
 
 ### Song Data
-The song data is in JSON format and contains metadata about a song and the artist of that song. The files can be found in `data/song_data/`. Below is an example of the contents of a song data file:
+The song data is in JSON format and contains metadata about a song and the artist of that song. The files can be found in `data/song_data/`. Below is an example of the content of a song data file:
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -186,7 +186,7 @@ The log data consists of log files in JSON format that simulate activity logs fr
 The schema is a star schema based around a fact table that represents the song plays.
 
 ### Fact Table
-**songplays**
+#### songplays
 Records in log data associated with song plays.
 - songplay_id serial PRIMARY KEY
 - start_time timestamp NOT NULL REFERENCES time(start_time)
@@ -200,7 +200,7 @@ Records in log data associated with song plays.
 
 
 ### Dimension Tables
-**users**
+#### users
 Users in the app.
 - user_id int PRIMARY KEY
 - first_name varchar NOT NULL
@@ -208,7 +208,7 @@ Users in the app.
 - gender varchar
 - level varchar NOT NULL
 
-**artists**
+#### artists
 Artists in music database.
 - artist_id varchar PRIMARY KEY
 - name varchar NOT NULL
@@ -216,7 +216,7 @@ Artists in music database.
 - latitude float
 - longitude float
 
-**songs**
+#### songs
 Songs in music database.
 - song_id varchar PRIMARY KEY
 - title varchar NOT NULL
@@ -224,7 +224,7 @@ Songs in music database.
 - year smallint NOT NULL
 - duration numeric NOT NULL
 
-**time**
+#### time
 Timestamps of records in songplays broken down into specific units.
 - start_time timestamp PRIMARY KEY
 - hour smallint
@@ -246,7 +246,7 @@ Timestamps of records in songplays broken down into specific units.
 - `postgres-data` - Local directory for the PostgreSQL Database file.
 
 ## Docker, PostgreSQL and Jupyter Notebook
-The project requires a PostgreSQL database and a Jupyter Notebook. The files include a `docker-compose` file that starts two containers, one for the database and one for the notebook. Files can be edited from the notebook or locally, since they are synced to the notebook container.
+The project requires a PostgreSQL database and a Jupyter Notebook. The files include a `docker-compose` file that starts two containers, one for the database and one for the notebook. Files can be edited from the notebook or locally (they are synced to the notebook container).
 
 First, make sure you have Docker installed. Then, run Docker Compose:
 ```bash
