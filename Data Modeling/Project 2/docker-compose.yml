@@ -1,0 +1,26 @@
+version: '3'
+services:
+  jupyter-notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/home/jovyan/workspace
+  cassandra-node-1:
+    image: bitnami/cassandra:latest
+    volumes:
+      - ./cassandra-node-1:/bitnami
+    environment:
+      CASSANDRA_CLUSTER_NAME: "cassandra-cluster"
+      CASSANDRA_SEEDS: cassandra-node1,cassandra-node2
+      CASSANDRA_PASSWORD_SEEDER: "yes"
+      CASSANDRA_PASSWORD: password123
+  cassandra-node-2:
+    image: bitnami/cassandra:latest
+    volumes:
+      - ./cassandra-node-2:/bitnami
+    environment:
+      CASSANDRA_CLUSTER_NAME: "cassandra-cluster"
+      CASSANDRA_SEEDS: cassandra-node1,cassandra-node2
+      CASSANDRA_PASSWORD_SEEDER: "yes"
+      CASSANDRA_PASSWORD: password123
